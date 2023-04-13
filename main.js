@@ -1,8 +1,7 @@
 import './style.scss'
-import $ from 'jquery'
+import { render } from './render.js'
+import { scrollHeader } from './listeners/scrollHeader'
 
-$('#app').html(
-  `<section>
-    <h1> Aqui comienza el desarrollo de una nueva aventura</h1>
-  </section>`
-)
+render(document.querySelector('#app'))
+
+scrollHeader()

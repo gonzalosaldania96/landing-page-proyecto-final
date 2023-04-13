@@ -1,0 +1,29 @@
+#header{
+    background-color: red;
+    height: 100px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+    transition: .7s;
+}
+
+#ul{
+    display: flex; 
+    gap: 2em;
+}
+
+main {
+    background-color: blue;
+    height: 100vh;
+}
+
+.general{
+    height: 400px;
+    width: 50%;
+    margin: auto;
+    position: relative;
+    top: 600px;
+    background-color: aquamarine;
+}
