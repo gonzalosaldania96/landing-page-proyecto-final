@@ -12,7 +12,7 @@ export function scrollHeader() {
     } else {
       header.css({ top: '-100px' });
     }
-  });
+  });  
 }
 
 
