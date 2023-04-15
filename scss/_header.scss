@@ -1,63 +1,12 @@
-//------------------Header-----------------
-// Variables
-$color-fondo: rgb(30, 13, 13);
-$color-texto: #fff;
-$tamano-fuente: 16px;
-$ancho-menu: 200px;
-
-// Encabezado
-#header {
-  background-color: $color-fondo;
-  height: 80px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  position: fixed;
-  width: 100%;
-  transition: 0.7s;
-  padding: 0 $ancho-menu;
-}
-
-#logo {
-  width: 70px;
-  height: 50px;
-  margin-left: $ancho-menu;
-
-  img {
-    max-width: 100%;
-    height: auto;
-  }
-}
-
-#menu-hamburguesa {
-  display: none;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  margin-right: -10px;
-  padding: 0;
-  z-index: 100;
-
-  span {
-    background-color: $color-texto;
-    display: block;
-    height: 3px;
-    margin-bottom: 5px;
-    transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
-    width: 25px;
-  }
-
-  &.open span:first-child {
-    transform: translateY(8px) rotate(45deg);
-  }
-
-  &.open span:nth-child(2) {
-    opacity: 0;
-  }
-
-  &.open span:last-child {
-    transform: translateY(-8px) rotate(-45deg);
-  }
+#header{
+    background-color: red;
+    height: 100px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+    transition: .7s;
 }
 
 #ul {
@@ -138,7 +87,7 @@ main {
 }
 
 .general{
-    height: 400px;
+    height: 1500px;
     width: 50%;
     margin: auto;
     position: relative;
