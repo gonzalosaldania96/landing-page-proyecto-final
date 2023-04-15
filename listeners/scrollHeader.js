@@ -1,18 +1,21 @@
 import $ from 'jquery';
 
+
 export function scrollHeader() {
-  const header = $('header');
-  const ubicacionPrincipal = window.pageYOffset;
-
+  let scrollAnterior = 0;
   window.addEventListener('scroll', () => {
-    const desplazamientoActual = window.pageYOffset;
+    const desplazamientoActual = window.scrollY;
 
-    if (ubicacionPrincipal === desplazamientoActual) {
-      header.css({ top: '0' });
+    if (desplazamientoActual < scrollAnterior) {
+      $('header').css({ top: 0 });
     } else {
-      header.css({ top: '-100px' });
+      $('header').css({ top: '-100px' });
     }
+
+    scrollAnterior = desplazamientoActual;
   });
 }
+
+
 
 

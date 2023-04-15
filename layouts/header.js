@@ -2,9 +2,14 @@ export function header () {
   return /* html */`
   <header id="header">
   <div id="logo">
-    <img src="./image/logo.png" alt="Logo de tu sitio web">
+    <img src="./image/logo.png" alt="Logo de equipo">
   </div>
-  <button id="menu-hamburguesa"><span></span><span></span><span></span></button>
+  <div id="menu-hamburguesa">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+
   <nav>
     <ul id="ul">
       <li><a href="#">Inicio</a></li>
@@ -14,11 +19,11 @@ export function header () {
     </ul>
   </nav>
 </header>
-
-
-
-      <main>
-        <div class="general">
-        </div>
-      </main>`
+<main>
+<section>
+<h1>
+chau mundo
+</h1>
+</section>
+</main>`
 }

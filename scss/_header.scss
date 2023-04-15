@@ -1,130 +1,101 @@
-//------------------Header-----------------
-// Variables
-$color-fondo: rgb(30, 13, 13);
-$color-texto: #fff;
-$tamano-fuente: 16px;
-$ancho-menu: 200px;
+$header-height: 80px;
+$logo-width: 120px;
 
-// Encabezado
-#header {
-  background-color: $color-fondo;
-  height: 80px;
+header {
+  height: $header-height;
+  background-color: #fff;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: fixed;
-  width: 100%;
-  transition: 0.7s;
-  padding: 0 $ancho-menu;
-}
+  padding-inline: 300px;
+  position: sticky;
+  top: 0;
+  transition: 0.6s;
 
-#logo {
-  width: 70px;
-  height: 50px;
-  margin-left: $ancho-menu;
+  nav {
+    ul {
+      display: flex;
+      list-style: none;
 
-  img {
-    max-width: 100%;
-    height: auto;
-  }
-}
-
-#menu-hamburguesa {
-  display: none;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  margin-right: -10px;
-  padding: 0;
-  z-index: 100;
-
-  span {
-    background-color: $color-texto;
-    display: block;
-    height: 3px;
-    margin-bottom: 5px;
-    transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
-    width: 25px;
-  }
-
-  &.open span:first-child {
-    transform: translateY(8px) rotate(45deg);
-  }
-
-  &.open span:nth-child(2) {
-    opacity: 0;
-  }
-
-  &.open span:last-child {
-    transform: translateY(-8px) rotate(-45deg);
-  }
-}
-
-#ul {
-  display: flex;
-  gap: 2em;
-  list-style: none;
-  margin: 0;
-  margin-right: $ancho-menu;
-
-  li {
-    a {
-      color: $color-texto;
-      text-decoration: none;
-      font-weight: bold;
-      transition: color 0.2s ease-in-out;
-      padding: 10px;
-
-      &:hover {
-        color: $color-texto;
-        text-decoration: underline;
-      }
-    }
-  }
-}
-
-// Media queries
-@media screen and (max-width: 768px) {
-  // Encabezado
-  #header {
-    padding: 0 20px;
-  }
-
-  #logo {
-    margin-left: 20px;
-  }
-
-  #menu-hamburguesa {
-    display: block;
-  }
-
-  // Menú
-  #ul {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 80px;
-    left: 0;
-    width: 100%;
-    background-color: rgb(80, 61, 61);
-    padding: 20px;
-      
-    li {
-      a {
-        color: #fff;
-        text-decoration: none;
-        font-weight: bold;
-        transition: color 0.2s ease-in-out;
-        padding: 10px;
-      
-        &:hover {
-          color: #fff;
-          text-decoration: underline;
+      li {
+        margin-right: 40px;
+        
+        a {
+          color: #000000;
+          text-decoration: none;
+          font-weight: bold;
+          
+          &:hover {
+            text-decoration: underline;
+          }
         }
       }
     }
   }
+
+  #menu-hamburguesa {
+    display: none;
+    cursor: pointer;
+    padding: 10px;
+
+    span {
+      display: block;
+      height: 2px;
+      background-color: #000;
+      
+      margin-bottom: 4px;
+    }
+  }
+
+  #logo {
+    width: $logo-width;
+    height: $header-height;
+
+    img {
+      width: 60%;
+      height: auto;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    padding-inline: 10px;
+
+    #menu-hamburguesa {
+      display: block;
+    }
+
+    nav {
+      display: none;
+      position: absolute;
+      top: $header-height;
+      left: 0;
+      width: 100%;
+      background-color: #000000;
+
+      ul {
+        flex-direction: column;
+
+        li {
+          margin-right: 0;
+          margin-bottom: 10px;
+        }
+      }
+    }
+
+    &.menu-visible {
+      nav {
+        display: block;
+      }
+    }
+  }
 }
+
+
+
+
+
+
+
 
   
   
@@ -133,15 +104,22 @@ $ancho-menu: 200px;
 //----------------------------------------------
 
 main {
-    background-color: blue;
-    height: 100vh;
+  background-color: #f2f2f2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  
+
+  section {
+    text-align: center;
+
+    h1 {
+      font-size: 48px;
+      color: #333;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px #ccc;
+    }
+  }
 }
 
-.general{
-    height: 400px;
-    width: 50%;
-    margin: auto;
-    position: relative;
-    top: 600px;
-    background-color: aquamarine;
-}
