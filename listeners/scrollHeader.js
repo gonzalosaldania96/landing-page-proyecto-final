@@ -1,15 +1,17 @@
 import $ from 'jquery'
 
 export function scrollHeader () {
-  const ubicacionPrincipal = window.pageYOffset
+  let scrollAnterior = 0
 
   window.addEventListener('scroll', () => {
-    console.log('Hola')
-    const desplazamientoActual = window.pageYOffset
-    if (ubicacionPrincipal === desplazamientoActual) {
-      $('header').css({ top: ubicacionPrincipal })
-      return
+    const desplazamientoActual = window.scrollY
+
+    if (scrollAnterior > desplazamientoActual) {
+      $('header').css({ top: 0 })
+    } else {
+      $('header').css({ top: '-100px' })
     }
-    $('header').css({ top: '-100px' })
+
+    scrollAnterior = desplazamientoActual
   })
 }
