@@ -9,51 +9,30 @@ footer {
   
   .social-icons {
     display: flex;
-    justify-content: flex-end;
-    margin-bottom: 20px;
+    align-items: center;
+    justify-content: center;
+   
+}
+
+.icons-footer{
+    width: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
     
-    a {
-      color: #555;
-      font-size: 24px;
-      margin-left: 10px;
-      transition: color 0.3s;
-      
-      &:hover {
-        color: #3b5998; 
-      }
-      
-      &:first-child {
-        margin-left: 0;
-      }
-    }
-  }
-  
-  
-  .legal {
-    margin-bottom: 10px;
-    
-    a {
-      color: #555;
-      text-decoration: none;
-      transition: color 0.3s;
-      
-      &:hover {
-        color: #3b5998; 
-      }
-      
-      &:after {
-        content: '|';
-        margin: 0 10px;
-      }
-      
-      &:last-child:after {
-        content: none;
-      }
-    }
-  }
-  
-  
-  .trademark {
-    font-size: 12px;
-    margin-top: 20px;
-  }
+}
+
+.fa-brands{
+    fill: white;
+    transition: .7s;
+}
+
+.fa-brands:hover{
+    fill: crimson;
+}
+
+.footer p{
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+}

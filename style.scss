@@ -2,11 +2,14 @@
 @import './scss/footer';
 
 body {
-  margin: 0;
-}
-
-#app {
+    margin-top: 0;
+  }
   
-  display: block;
+  #app {
+    height: auto;
+    display: flex;
+    justify-content: center;
+    
+  }
   
 }
