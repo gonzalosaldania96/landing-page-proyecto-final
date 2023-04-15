@@ -14,9 +14,10 @@
     "vite": "^4.2.0"
   },
   "dependencies": {
-    "jquery": "3.6.4"
+    "@fortawesome/fontawesome-free": "^6.4.0",
+    "jquery": "^3.6.4"
   },
   "eslintConfig": {
-    "extends":"standard"
+    "extends": "standard"
   }
 }

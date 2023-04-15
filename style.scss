@@ -1,8 +1,14 @@
 @import './scss/header';
+@import './scss/footer';
 
-// #app{
-//     height: 100vh;
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-// }
+body {
+    margin-top: 0;
+  }
+  
+  #app {
+    height: auto;
+    display: flex;
+    justify-content: center;
+    
+  }
+  

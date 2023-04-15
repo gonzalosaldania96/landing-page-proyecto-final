@@ -1,34 +1,218 @@
-body{
-    margin: 0;
+$header-height: 80px;
+$logo-width: 120px;
+
+header {
+  height: $header-height;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 300px;
+  position: sticky;
+  top: 0;
+  transition: 0.6s;
+
+#logo {
+  width: 70px;
+  height: 50px;
+  margin-left: $ancho-menu;
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
 }
 
-#header{
-    background-color: red;
-    height: 100px; 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: fixed;
-    width: 100%;
-    transition: .7s;
-    z-index: 1;
+#menu-hamburguesa {
+  display: none;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  margin-right: -10px;
+  padding: 0;
+  z-index: 100;
+
+  span {
+    background-color: $color-texto;
+    display: block;
+    height: 3px;
+    margin-bottom: 5px;
+    transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+    width: 25px;
+  }
+
+  &.open span:first-child {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  &.open span:nth-child(2) {
+    opacity: 0;
+  }
+
+  &.open span:last-child {
+    transform: translateY(-8px) rotate(-45deg);
+  }
 }
 
-#ul{
-    display: flex; 
-    gap: 2em;
+#ul {
+  display: flex;
+  gap: 2em;
+  list-style: none;
+  margin: 0;
+  margin-right: $ancho-menu;
+
+      li {
+        margin-right: 40px;
+        
+        a {
+          color: #000000;
+          text-decoration: none;
+          font-weight: bold;
+          
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+
+  #menu-hamburguesa {
+    display: none;
+    cursor: pointer;
+    padding: 10px;
+
+    span {
+      display: block;
+      height: 2px;
+      background-color: #000;
+      
+      margin-bottom: 4px;
+    }
+  }
+
+  #logo {
+    width: $logo-width;
+    height: $header-height;
+
+    img {
+      width: 60%;
+      height: auto;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    padding-inline: 10px;
+
+    #menu-hamburguesa {
+      display: block;
+    }
+
+    nav {
+      display: none;
+      position: absolute;
+      top: $header-height;
+      left: 0;
+      width: 100%;
+      background-color: #000000;
+
+      ul {
+        flex-direction: column;
+
+        li {
+          margin-right: 0;
+          margin-bottom: 10px;
+        }
+      }
+    }
+
+    &.menu-visible {
+      nav {
+        display: block;
+      }
+    }
+  }
 }
 
-main {
-    background-color: blue;
-    height: 100vh;
+  
+  
+
+
+//----------------------------------------------
+
+// Definimos algunas variables
+$color-primario: #336699;
+$color-fondo: #f0f0f0;
+
+// Estilos para el cuerpo de la página
+
+
+// Estilos para el encabezado
+h1 {
+  font-size: 2em;
+  color: $color-primario;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+// Estilos para la sección
+section {
+  padding: 2em;
+  margin: 2em auto;
+  background-color: white;
+  border: 1px solid $color-primario;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+//-------------------------------------------
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #f2f2f2;
+  border-radius: 10px;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  padding: 10px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+textarea {
+  height: 150px;
+}
+
+button[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .general{
-    height: 1500px;
+    height: 400px;
     width: 50%;
     margin: auto;
     position: relative;
     top: 600px;
     background-color: aquamarine;
 }
+
