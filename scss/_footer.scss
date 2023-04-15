@@ -4,28 +4,29 @@
     display: flex;
     align-items: center;
     justify-content: center;
-   
+    width: 100%;
+
+    .icons-footer{
+        width: 700px;
+        display: flex;
+        align-items: center;    
+        justify-content: space-evenly;
+        
+        .fa-brands{
+            fill: white;
+            transition: .7s;
+        }
+
+        &:hover{
+            fill: crimson;
+        }
+            
+    }
+  
+    .footer p{
+        color: white;
+        font-size: 20px;
+        font-weight: 600;
+    }
 }
 
-.icons-footer{
-    width: 700px;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    
-}
-
-.fa-brands{
-    fill: white;
-    transition: .7s;
-}
-
-.fa-brands:hover{
-    fill: crimson;
-}
-
-.footer p{
-    color: white;
-    font-size: 20px;
-    font-weight: 600;
-}

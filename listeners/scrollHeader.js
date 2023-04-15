@@ -11,8 +11,8 @@ export function scrollHeader() {
       header.css({ top: '0' });
     } else {
       header.css({ top: '-100px' });
-    }
-  });  
-}
-
+    }      
+  });   
+}     
+   
 
