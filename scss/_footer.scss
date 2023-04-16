@@ -4,14 +4,19 @@ footer {
     font-size: 14px;
     padding: 20px;
     text-align: center;
+
+    p{
+        color: #000;
+        font-size: 20px;
+        font-weight: 600;
+    }
   }
   
   
-  .social-icons {
+.social-icons {
     display: flex;
     align-items: center;
     justify-content: center;
-   
 }
 
 .icons-footer{
@@ -19,20 +24,16 @@ footer {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    
+    margin: auto;
 }
 
 .fa-brands{
-    fill: white;
+    fill: #000;
     transition: .7s;
-}
+    width: 39px;
+    
+    &:hover{
+        fill: crimson;
+    }
 
-.fa-brands:hover{
-    fill: crimson;
-}
-
-.footer p{
-    color: white;
-    font-size: 20px;
-    font-weight: 600;
 }

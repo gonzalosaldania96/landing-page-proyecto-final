@@ -1,25 +1,25 @@
+$color-texto: #fff;
 $header-height: 80px;
 $logo-width: 120px;
 
 header {
   height: $header-height;
-  background-color: #fff;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding-inline: 300px;
-  position: sticky;
+  justify-content: space-around;
+  position: fixed;
   top: 0;
   transition: 0.6s;
+  z-index: 1;
+  width: 100%;
 
-#logo {
-  width: 70px;
-  height: 50px;
-  margin-left: $ancho-menu;
+  #logo {
+    width: 70px;
+    display: flex;
+    align-items: center;
 
   img {
-    max-width: 100%;
-    height: auto;
+    width: 100%;
   }
 }
 
@@ -59,7 +59,6 @@ header {
   gap: 2em;
   list-style: none;
   margin: 0;
-  margin-right: $ancho-menu;
 
       li {
         margin-right: 40px;
@@ -102,7 +101,9 @@ header {
   }
 
   @media screen and (max-width: 767px) {
-    padding-inline: 10px;
+    header{
+      padding-inline: 10px;
+    }
 
     #menu-hamburguesa {
       display: block;
@@ -126,93 +127,10 @@ header {
       }
     }
 
-    &.menu-visible {
+    .menu-visible {
       nav {
         display: block;
       }
     }
   }
-}
-
   
-  
-
-
-//----------------------------------------------
-
-// Definimos algunas variables
-$color-primario: #336699;
-$color-fondo: #f0f0f0;
-
-// Estilos para el cuerpo de la página
-
-
-// Estilos para el encabezado
-h1 {
-  font-size: 2em;
-  color: $color-primario;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-// Estilos para la sección
-section {
-  padding: 2em;
-  margin: 2em auto;
-  background-color: white;
-  border: 1px solid $color-primario;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
-
-//-------------------------------------------
-
-form {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  max-width: 500px;
-  margin: 0 auto;
-  padding: 20px;
-  box-sizing: border-box;
-  background-color: #f2f2f2;
-  border-radius: 10px;
-}
-
-label {
-  font-weight: bold;
-  margin-bottom: 5px;
-}
-
-input[type="text"],
-input[type="email"],
-textarea {
-  padding: 10px;
-  margin-bottom: 20px;
-  border: none;
-  border-radius: 5px;
-  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
-}
-
-textarea {
-  height: 150px;
-}
-
-button[type="submit"] {
-  background-color: #4CAF50;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.general{
-    height: 400px;
-    width: 50%;
-    margin: auto;
-    position: relative;
-    top: 600px;
-    background-color: aquamarine;
-}
-
