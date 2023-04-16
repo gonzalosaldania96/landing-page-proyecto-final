@@ -1,19 +1,24 @@
-import $ from 'jquery';
+import $ from 'jquery'
 
-
-export function scrollHeader() {
-  const header = $('header');
-  const ubicacionPrincipal = window.pageYOffset;
+export function scrollHeader () {
+  const header = $('header')
+  let ubicacionPrincipal = 0
 
   window.addEventListener('scroll', () => {
-    const desplazamientoActual = window.pageYOffset;
+    const desplazamientoActual = window.scrollY
 
-    if (ubicacionPrincipal === desplazamientoActual) {
-      header.css({ top: '0' });
+    if (desplazamientoActual === 0) {
+      header.css({ background: 'transparent' })
     } else {
-      header.css({ top: '-100px' });
+      header.css({ background: 'white' })
     }
-  });  
+
+    if (ubicacionPrincipal > desplazamientoActual) {
+      header.css({ top: '0' })
+    } else {
+      header.css({ top: '-100px' })
+    }
+
+    ubicacionPrincipal = desplazamientoActual
+  })
 }
-
-
