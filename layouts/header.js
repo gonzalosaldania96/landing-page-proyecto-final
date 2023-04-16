@@ -1,4 +1,4 @@
-export function header () {
+export default function Header () {
   return /* html */`
   <header id="header">
   <div id="logo">
@@ -18,36 +18,5 @@ export function header () {
       <li><a href="#">Contacto</a></li>
     </ul>
   </nav>
-</header>
-<br></br>
-<br></br>
-
-<br></br>
-<br></br>
-<br></br>
-
-<br></br>
-<br></br>
-<br></br>
-
-<main>
-<section>
-<h1>
-
-</h1>
-</section>
-</main>
-<form action="#" method="post">
-  <label for="name">Nombre:</label>
-  <input type="text" id="name" name="name" required>
-
-  <label for="email">Email:</label>
-  <input type="email" id="email" name="email" required>
-
-  <label for="message">Mensaje:</label>
-  <textarea id="message" name="message" required></textarea>
-
-  <button type="submit">Enviar</button>
-</form>
-`
+</header>`
 }

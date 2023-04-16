@@ -1,4 +1,4 @@
-export function footer () {
+export default function Footer () {
   return /* html */`
   <footer class="footer">
   <div class="icons-footer">

@@ -1,9 +1,11 @@
-import { header } from './layouts/header.js';
-import { footer } from './layouts/footer.js'
+import Header from './layouts/Header.js'
+import Footer from './layouts/Footer.js'
+import Main from './layouts/Main.js'
 
 export function render (root) {
   root.innerHTML = `  
-      ${header()}
-      ${footer()}
+      ${Header()}
+      ${Main()}
+      ${Footer()}
       `
 }
