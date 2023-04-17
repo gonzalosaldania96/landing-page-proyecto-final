@@ -1,12 +1,11 @@
 import CompanyPresent from './CompanyPresent.js'
 import Contact from './contact.js'
 import Hero from './Hero.js'
-import recomendation from './recomendation.js';
+import recomendation from './recomendation.js'
 
-const img = 'cratos.png';
+const img = 'cratos.png'
 const rutaPrincipal = import.meta.url.split('/').at(2)
 const rutaImg = `http://${rutaPrincipal}/image/hero/${img}`
-
 
 export default function Main () {
   return /* html */`

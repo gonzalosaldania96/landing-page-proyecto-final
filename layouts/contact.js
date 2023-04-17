@@ -1,8 +1,7 @@
 export default function Contact () {
-  const img = 'cold-war.jpg';
+  const img = 'cold-war.jpg'
   const rutaPrincipal = import.meta.url.split('/').at(2)
   const rutaImg = `http://${rutaPrincipal}/image/hero/${img}`
-
 
   return /* html */`
    
