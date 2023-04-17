@@ -5,7 +5,7 @@ export default function HeroImg ({ img, text }) {
 
   return /* html */`
   <div class="slideshow-container">
-  <img src=${rutaImg} style="height:100%;width:100%;object-fit:cover;filter: blur(2px);">
+  <img src=${rutaImg} style="height:100%;width:100%;object-fit:cover;">
     <div style="
     position: absolute;
     top: 50%;

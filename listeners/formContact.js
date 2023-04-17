@@ -1,59 +1,89 @@
-import { validate } from 'validate.js'
+import $ from 'jquery'  
 
-const restricciones = {
-  nombre: {
-    presence: { message: 'El campo nombre es obligatorio' }
-  },
-  email: {
-    presence: { message: 'El campo email es obligatorio' },
-    email: { message: 'El campo email debe ser una dirección de correo electrónico válida' },
-    format: {
-      pattern: /^\S+@\S+\.\S+$/,
-      message: 'El campo email debe ser una dirección de correo electrónico válida'
-    }
-  },
-  mensaje: {
-    presence: { message: 'El campo mensaje es obligatorio' }
+function validarFormulario(evento) {
+     
+  evento.preventDefault();
+  
+  const nombre = document.getElementById("nombre").value;
+  const email = document.getElementById("email").value;
+  const mensaje = document.getElementById("mensaje").value;
+  const mensajeErrorName = document.getElementById("error-mensaje");
+  const mensajeErrorEmail = document.getElementById("error-mensaje-1");
+  const formEnviado =  document.getElementById("ok-form");
+  const mensajeErrorTextTarea = document.getElementById("error-mensaje-2");
+  let acumulador = 0;
+
+  const reg = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  
+  if (nombre.trim() === "" || nombre.length < 4) {
+    alert("El campo Nombre es obligatorio");
+    mensajeErrorName.style.display = "block";
+    disapprove("#nombre");
+  
+  }else{
+    mensajeErrorName.style.display = "none";
+    approve("#nombre");
+    acumulador++;
   }
+  
+  if (email.trim() === "") {
+    mensajeErrorEmail.style.display = "block";
+    disapprove("#email");
+  }else{
+    approve("#email");
+    acumulador++;
+  }
+
+  if (!email.match(reg)) {
+    alert("El campo Email no tiene un formato válido");
+    mensajeErrorEmail.style.display = "block";
+    disapprove("#email");
+
+  }else{
+    mensajeErrorEmail.style.display = "none";
+    approve("#email");
+    acumulador++;
+  }
+
+  if (mensaje.trim() === "" || mensaje.length < 5) {  
+    alert("El campo Mensaje es obligatorio");
+    disapprove("#mensaje");
+    mensajeErrorTextTarea.style.display = "block";
+    
+  }else{
+    approve("#mensaje");
+    mensajeErrorTextTarea.style.display = "none";
+    acumulador++;
+
+  }
+
+  if(acumulador == 4){
+    alert('form enviado');
+    setTimeout(()=>{resetear(evento.target)}, 3000);
+  }
+  
+  
 }
 
-export function formContact () {
-  const form = document.querySelector('.contacto__form')
-  form.addEventListener('submit', function (event) {
-    event.preventDefault()
+function approve(selector){
+  $(selector).css({"border-bottom":"1px solid green", "transition":".7s"}); 
+  console.log('hola');
+}
 
-    const datosform = new FormData(form)
-    const dato = {
-      nombre: datosform.get('nombre'),
-      email: datosform.get('email').trim(),
-      mensaje: datosform.get('mensaje')
-    }
+function disapprove(selector){
+  $(selector).css({"border-bottom":"1px solid red", "transition":".7s"});   
+}
+    
 
-    const errores = validate(dato, restricciones)
+function resetear(form){ 
+  form.reset();
+  $("#nombre").css({"border-bottom":"1px solid white", "transition":".7s"});
+  $("#email").css({"border-bottom":"1px solid white", "transition":".7s"});
+  $("#mensaje").css({"border-bottom":"1px solid white", "transition":".7s"});
+}
 
-    if (errores) {
-      const primeraclavedeerror = Object.keys(errores)[0]
-      const primermensajedeerror = errores[primeraclavedeerror][0]
-      const errordecampo = form.querySelector(`[name="${primeraclavedeerror}"]`)
-
-      errordecampo.setCustomValidity(primermensajedeerror)
-      errordecampo.reportValidity()
-    } else {
-      let etapaactual = null
-      const formGroups = form.querySelectorAll('.form-group')
-      for (let i = 0; i < formGroups.length; i++) {
-        if (formGroups[i].style.display !== 'none') {
-          etapaactual = formGroups[i]
-          break
-        }
-      }
-
-      if (etapaactual && etapaactual.nextElementSibling) {
-        etapaactual.style.display = 'none'
-        etapaactual.nextElementSibling.style.display = 'block'
-      } else {
-        form.submit()
-      }
-    }
-  })
+export function formContact(){
+  
+  const formulario = document.querySelector(".contacto__form");
+  formulario.addEventListener("submit", validarFormulario); 
 }

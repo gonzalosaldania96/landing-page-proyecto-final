@@ -1,12 +1,48 @@
 [
     { 
-    "img": "gta.png", 
-    "text": "Soy rico , soy miserable, soy bastante promedio para esta ciudad Michael" 
+     "img": "play.png", 
+     "text": "" 
     }, 
     {
-    "img": "play.png"
+    "img": "forza.png"
     }, 
     {
-    "img": "juego1.png"
+    "img": "batalla.png"
+    },
+
+    { 
+    "img": "the-last-of-us-2.png", 
+    "text": "" 
+    },
+
+    {
+      "img": "battlefield.png"
+    },
+
+    { 
+    "img": "6098048.png"
+    },
+
+    { 
+    "img": "gow.png"
+    },
+
+    {
+      "img": "gta.png"
+    }, 
+
+    { 
+    "img": "6098048.png"
+    },
+
+    { 
+        "img": "the-last-of-us.png"
+    },
+
+    {
+
     }
+
+
+
 ]

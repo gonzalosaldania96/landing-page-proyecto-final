@@ -1,7 +1,7 @@
 import { GridImage } from '../components/GridImage'
 
 export default function CompanyPresent () {
-  const imagenes = ['', '', '', '', '', '', '', '']
+  const imagenes = ['battlefield.png', 'gta.png', 'batalla.png', 'play.png', 'the-last-of-us-2.png', 'the-last-of-us.png', 'juego1.png', '6098048.png']
   return /* html */`
     <section class="section-presentation-games">
 

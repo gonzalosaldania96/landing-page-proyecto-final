@@ -1,0 +1,54 @@
+
+.section-tab{
+    height: 700px;
+    width: 100%;
+    background: url(./public/image/hero/paisaje.png) no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,  
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+   
+} 
+
+
+.comment-section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    height: 700px;
+    width: 100%;
+    gap: 2em;
+    opacity: .8;
+    
+}
+
+.comment-section img{
+    width: 40px;
+    border-radius: 50%;
+}
+
+.comment-section .comment{
+    width: 25%;
+    background-color: darkblue;
+    height: 200px;
+    border-radius: 10px;
+    box-shadow: 20px 20px 22px -20px black;
+}
+
+
+.img-desc{
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    line-height: 5px;
+    margin-top: 20px;
+    position: relative;
+    right: 20px;
+}
+
+.name-desc{
+    position: relative;
+    right: 20px;
+}

@@ -3,9 +3,14 @@
 @import './scss/contact';
 @import './scss/hero';
 @import './scss/companyPresent';
+@import './scss/banner';
+@import './scss/recomendation';
 
 body {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
 }
   
 #app {

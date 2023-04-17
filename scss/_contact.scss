@@ -1,46 +1,74 @@
 .contacto {
-  background-image: url("../public/image/hero/ojo-cratos.png");
+  background-image: url("./public/image/hero/batalla.png");
   background-size: cover;
-  background-position: center;
   padding: 50px 0;
+  
+}  
 
-  .container {
-    max-width: 1200px;
+.container {
+    height: 500px;  
+    width: 950px;
     margin: 0 auto;
+    min-height: 600px;
   }
 
   .contacto__wrapper {
     display: flex;
     justify-content: space-between;
     align-items: flex-start; /* Ajusta la alineación vertical */
+    background-color: #2c2d2f;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    opacity: .9;
   }
 
   .contacto__form {
-    width: 50%;
+    height: 100%;
+    width: 450px;
     background-color: rgba(#0c0a0a, 0.8); /* Usa rgba para transparencia */
-    padding: 40px;
-    border-radius: 10px;
+    line-height: 30px;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.996);
-    margin-right: 30px;
     color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 2em;
+    }
 
     .contacto__titulo {
       font-size: 32px;
       font-weight: bold;
-      margin-bottom: 20px;
+      width: 400px;
       padding: 20px;
+      position: relative;
+ 
+    }
+
+    .contacto__titulo::after{
+      content: "";
+      height: 10px;
+      width: 143px;
+      background-color: #bb201f;
+      position: absolute;
+      z-index: -1;
+      margin-top: -8px;
+      display: block;
+      border-radius: 15px;
     }
 
     .contacto__campo {
       display: flex;
       flex-direction: column;
-      margin-bottom: 20px;
+
       padding: 20px;
+      }
+
 
       label {
         font-size: 16px;
         margin-bottom: 5px;
       }
+      
 
       input,
       textarea {
@@ -49,45 +77,53 @@
         box-shadow: none;
         -webkit-box-shadow: none;
         -moz-box-shadow: none;
-        padding: 5px 0;
+      
         color: #fff;
         
         transition: border-bottom 0.4s;
         background: none;
         resize: none;
 
-        &:focus {
+      }  
+
+      input:focus {
           outline: none;
           border-bottom: 1px solid #bb201f;
         }
-      }
+
+      textarea:focus{
+        outline: none;
+        border-bottom: 1px solid #bb201f;
+      }  
 
       textarea {
-        height: 150px;
+        height: 80px;
         resize: none;
       }
-    }
+
+      .div-boton{
+        width: 450px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1em;
+
+      }
 
     .contacto__boton {
-      background-color: #252628;
-      color: #fff;
+      background-color: white;
+      color: black;
       border: none;
       border-radius: 5px;
       padding: 10px 30px;
       font-size: 16px;
+      margin-bottom: 30px; 
       cursor: pointer;
+      align-self: center;
       transition: background-color 0.4s;
+    }
 
-      &:hover {
-        background-color: #2c2d2f;
+    .contacto__boton:hover {
+        background-color: cadetblue;
       }
-    }
-
-    p {
-      margin-top: 0; 
-      margin-bottom: 20px; 
-      font-size: 16px; 
-    }
-  }
-}
-
+  
