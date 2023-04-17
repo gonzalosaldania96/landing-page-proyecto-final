@@ -5,18 +5,11 @@ export default function HeroImg ({ img, text }) {
 
   return /* html */`
   <div class="slideshow-container">
+  <div class = "text-hero">       
+  ${text}
+  </div>
   <img src=${rutaImg} style="height:100%;width:100%;object-fit:cover;">
-    <div style="
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    font-size: 30px;
-    width: 500px;
-    font-weight: bold;
-    transform: translate(-50%,-50%);
-    color: red;">
-    <h2>${text}</h2>
-    </div>
+   
   </div>
     `
 }

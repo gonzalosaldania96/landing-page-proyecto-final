@@ -4,7 +4,14 @@
     height: 800px;
     width: 100%;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-evenly;  
+  }
+
+  .presentation{  
+    p{
+       margin: 0;
+       line-height: 30px;
+    }
   }
   
   .section-presentation-games h2, p{

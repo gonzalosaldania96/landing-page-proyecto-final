@@ -32,15 +32,11 @@
     "text": "No es el hecho de que no podamos hacerlo, es el hecho de que debemos hacerlo" 
     },
     { 
-    "img": "cratos.png", 
-    "text": "¡Soy el Dios de la Guerra!" 
-    },
-    { 
     "img": "forza.png", 
     "text": "El festival nunca termina" 
     },
     { 
-    "img": "gow.png", 
+    "img": "gow.png",  
     "text": "¡Zeus, tu hijo ha regresado! ¡He traído el caos al Olimpo!" 
     },
     { 
@@ -56,3 +52,4 @@
     "text": "¡Hemos sobrevivido gracias a mí! ¡No gracias a ti!" 
     }
 ]
+ 

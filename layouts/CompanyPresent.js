@@ -12,9 +12,13 @@ export default function CompanyPresent () {
   </div>
 
   <div class="presentation" style="color: white;">
-    <h2>Lorem ipsum <strong style="color: rgb(214, 237, 114);">dolor</strong> sit amet.</h2>
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae commodi eveniet dolor excepturi natus consequatur, nulla vero aliquid obcaecati nam.</p>
-  </div>
+    <h2>Quienes <strong style="color: rgb(214, 237, 114);">somos</strong></h2>
+    <p>Bienvenidos a nuestra empresa de asesoría de videojuegos, una empresa líder en el sector de los videojuegos. </p>
+
+    <p> Nos enorgullece ser una de las pocas empresas en el mercado que se dedica exclusivamente a asesorar y ayudar a los desarrolladores de videojuegos a crear juegos increíbles y exitosos.</p>
+    <p>En nuestra empresa, contamos con un equipo de expertos en el diseño y desarrollo de videojuegos, que han trabajado en proyectos de gran envergadura y han colaborado con algunas de las empresas más importantes de la industria. </p>
+    
+    </div>
 
   
 </section>`

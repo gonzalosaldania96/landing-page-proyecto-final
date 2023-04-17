@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;900&display=swap");
 @import './scss/header';
 @import './scss/footer';
 @import './scss/contact';
@@ -11,9 +12,10 @@ body {
     padding: 0;
     box-sizing: border-box;
     overflow-x: hidden;
+    font-family:'Nunito Sans', sans-serif; 
 }
-  
-#app {
+
+#app {  
   display: flex;
   justify-content: center;
   flex-direction: column;
