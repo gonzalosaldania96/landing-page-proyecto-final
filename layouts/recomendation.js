@@ -8,6 +8,6 @@ export default function recomendation () {
   <div class="comment-section">
         ${usuarios.map(user => CommentUser(user)).join('')}
       </div>   
-</section> 
+  </section> 
   `
 }
