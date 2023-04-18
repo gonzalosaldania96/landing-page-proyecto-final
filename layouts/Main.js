@@ -1,11 +1,11 @@
+import { generateRuteImg } from '../utils/index.js'
 import CompanyPresent from './CompanyPresent.js'
 import Contact from './contact.js'
 import Hero from './Hero.js'
 import recomendation from './recomendation.js'
 
 const img = 'cratos.png'
-const rutaPrincipal = import.meta.url.split('/').at(2)
-const rutaImg = `http://${rutaPrincipal}/image/hero/${img}`
+const rutaImg = generateRuteImg(img)
 
 export default function Main () {
   return /* html */`

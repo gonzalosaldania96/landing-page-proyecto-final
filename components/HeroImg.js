@@ -1,7 +1,7 @@
+import { generateRuteImg } from '../utils'
 
 export default function HeroImg ({ img, text }) {
-  const rutaPrincipal = import.meta.url.split('/').at(2)
-  const rutaImg = `http://${rutaPrincipal}/image/hero/${img}`
+  const rutaImg = generateRuteImg(img)
 
   return /* html */`
   <div class="slideshow-container">

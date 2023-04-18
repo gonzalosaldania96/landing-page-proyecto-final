@@ -1,5 +1,6 @@
+import { generateRuteImg } from '../utils'
+
 export function GridImage (imgUrl) {
-  const rutaPrincipal = import.meta.url.split('/').at(2)
-  const rutaImg = `http://${rutaPrincipal}/image/hero/${imgUrl}`
+  const rutaImg = generateRuteImg(imgUrl)
   return `<img src=${rutaImg}/>`
 }
