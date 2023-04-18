@@ -28,7 +28,7 @@
     align-items: center;
     color: white;
     height: 700px;
-    width: 80%;
+    width: 100%;
     gap: 2em; 
 
 }
@@ -74,7 +74,7 @@
     position: relative;
     right: 20px;
 }
-
+ 
 .comments {
   background-image: url('juego5.png');
   padding: 50px;
@@ -109,7 +109,7 @@
   box-shadow: 0 0 10px rgba(154, 151, 151, 0.7);
   margin-bottom: 30px;
   height: 250px;
-  width: 350px;
+  width: 400px;
   overflow: hidden;
   border-top: 10px solid red;
   border-bottom: 5px solid yellow;
