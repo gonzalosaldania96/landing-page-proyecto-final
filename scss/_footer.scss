@@ -1,8 +1,7 @@
 .footer{
     height: 300px;
-    background: url(/public/image/hero/battlefield-2042.jpg);
-    background-size: cover;
-    background-position: center;
+    background-size: cover !important;
+    background-position: center !important;
     display: flex;
     align-items: center;
     justify-content: space-between;

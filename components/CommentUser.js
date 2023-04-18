@@ -1,7 +1,8 @@
+import { generateRuteImg } from '../utils'
+
 export default function CommentUser (user) {
   const img = 'cratos.png'
-  const rutaPrincipal = import.meta.url.split('/').at(2)
-  const rutaImg = `http://${rutaPrincipal}/image/hero/${img}`
+  const rutaImg = generateRuteImg(img)
 
   return ` <div class="comments__card">
     <div class="comments__avatar"><img src=${rutaImg} alt="Avatar"></div>
@@ -11,4 +12,3 @@ export default function CommentUser (user) {
     </div>
   </div>`
 }
- 

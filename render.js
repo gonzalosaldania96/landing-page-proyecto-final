@@ -1,6 +1,6 @@
-import Header from './layouts/Header.js'
-import Footer from './layouts/Footer.js'
-import Main from './layouts/Main.js'
+import Header from './layouts/Header'
+import Footer from './layouts/Footer'
+import Main from './layouts/Main'
 
 export function render (root) {
   root.innerHTML = `  
