@@ -50,17 +50,17 @@ function validarFormulario (evento) {
     approve('#mensaje')
     mensajeErrorTextTarea.style.display = 'none'
     acumulador++
-  }
+  } 
 
-  if (acumulador == 4) {
-    // alert('form enviado')
+  if (acumulador === 4) {
+    // eslint-disable-next-line no-undef
+    alert('el form ha sido enviado')
     setTimeout(() => { resetear(evento.target) }, 3000)
   }
 }
 
 function approve (selector) {
   $(selector).css({ 'border-bottom': '1px solid green', transition: '.7s' })
-  console.log('hola')
 }
 
 function disapprove (selector) {
