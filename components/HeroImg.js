@@ -9,4 +9,4 @@ export default function HeroImg ({ img, text }) {
     <img src=${rutaImg} style="height:100%;width:100%;object-fit:cover;">
   </div>
     `
-}
+}   
