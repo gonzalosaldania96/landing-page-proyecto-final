@@ -13,7 +13,8 @@
     max-width: 100%;
     
     overflow: hidden;
-    margin: 0;  
+    margin: 0;
+
     img {   
       position: absolute;
       top: 0;
@@ -23,26 +24,21 @@
       object-fit: cover;
       opacity: 0;
       transition: opacity 4s ease-in-out;
-      &:first-child {
-        opacity: 1;
-      }
     }
-  }
 
-  .text-hero{
-   
-    color: white; 
-    text-align: center; 
-    font-size: 30px;
-    font-weight: 700; 
-    position: absolute;
-    z-index: 2;
-    display: flex;
-    align-items: end;  
-    height: 100%;
-    width: 800px;  
-    opacity: 1;
-    bottom: 100px;
-    left: 20px;    
- 
+    .text-hero{
+      color: white; 
+      text-align: center; 
+      font-size: 30px;
+      font-weight: 700; 
+      position: absolute;
+      z-index: 2;
+      display: flex;
+      align-items: end;  
+      height: 100%;
+      width: 800px;  
+      opacity: 0;
+      bottom: 100px;
+      left: 20px;
+    }
   }
