@@ -6,27 +6,37 @@
     background-position: center;
     background-size: cover;
     display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,  
     rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
-   
+    overflow: hidden;
 }  
+
+.title-comments{
+  color: white;
+  font-size: 40px;
+  font-weight: 900;
+
+}
 
 
 .comment-section{
     display: flex;  
-    align-items: center;
     justify-content: center;
+    align-items: center;
     color: white;
     height: 700px;
-    width: 100%;
+    width: 80%;
     gap: 2em; 
-    opacity: .8; 
+
 }
 
 .comment-section img{
     width: 40px;
     border-radius: 50%;
-}
+} 
 
 .comment-section .comment{
     width: 25%;
@@ -34,6 +44,19 @@
     height: 200px;
     border-radius: 10px;
     box-shadow: 20px 20px 22px -20px black;
+}
+
+.comments__card{
+  height: 250px;
+  width: 350px;
+  overflow: hidden;
+  border-top: 10px solid red;
+  border-bottom: 5px solid yellow;
+
+}
+
+.comments__comment{
+  width: auto;
 }
 
 
@@ -53,92 +76,96 @@
 }
 
 .comments {
-    background-image: url('juego5.png');
-    padding: 50px;
-    
-    &__title {
-      text-align: center;
-      font-size: 2.5rem;
-      margin-bottom: 50px;
-      color: #fff;
-    }
-  
-    &__container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      
-
-      &__card{
-        background: #656565;
-        padding: 20px;
-        border-radius: 20px;
-      }
-  
-      @media screen and (min-width: 768px) {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
-      }
-  
-      .comments__card {
-        background-color: #656565;
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(250, 249, 249, 0.1);
-        margin-bottom: 30px;
-        width: 100%;
-        
-  
-        @media screen and (min-width: 768px) {
-          width: calc(50% - 15px);
-        }
-  
-        @media screen and (min-width: 1200px) {
-          width: calc(33.33% - 20px);
-        }
-  
-        .comments__avatar {
-          width: 60px;
-          height: 60px;
-          border-radius: 50%;
-          overflow: hidden;
-          margin: 20px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-  
-          img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-          }
-        }
-  
-        .comments__text {
-          margin: 20px;
-          color: #fff;
-  
-          .comments__name {
-            font-weight: bold;
-            margin-bottom: 10px;
-          }
-  
-          .comments__comment {
-            margin-bottom: 10px;
-          }
-  
-          .comments__meta {
-            display: flex;
-            align-items: center;
-  
-            span {
-              margin-right: 10px;
-              font-size: 0.8rem;
-              color: #eeeeee;
-            }
-          }
-        }
-      }
-    }
+  background-image: url('juego5.png');
+  padding: 50px;
+ 
   }
+  
+  .comments__title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  color: #fff;
+  }
+  
+  .comments__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  }
+  
+  @media screen and (min-width: 768px) {
+  .comments__container {
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  }
+  }
+  
+  .comments__card {
+  background-color: rgba(147, 145, 144, 0.7);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(154, 151, 151, 0.7);
+  margin-bottom: 30px;
+  height: 250px;
+  width: 350px;
+  overflow: hidden;
+  border-top: 10px solid red;
+  border-bottom: 5px solid yellow;
+  }
+  
+  @media screen and (min-width: 768px) {
+  .comments__card {
+  width: calc(50% - 15px);
+  }
+  }
+  
+  @media screen and (min-width: 1200px) {
+  .comments__card {
+  width: calc(33.33% - 20px);
+  }
+  }
+  
+  .comments__avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  }
+  
+  .comments__avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  }
+  
+  .comments__text {
+  margin: 20px;
+  color: #fff;
+  }
+  
+  .comments__name {
+  font-weight: bold;
+  margin-bottom: 10px;
+  }
+  
+  .comments__comment {
+  margin-bottom: 10px;
+  }
+  
+  .comments__meta {
+  display: flex;
+  align-items: center;
+  }
+  
+  .comments__meta span {
+  margin-right: 10px;
+  font-size: 0.8rem;
+  color: #eeeeee;
+  }
+  

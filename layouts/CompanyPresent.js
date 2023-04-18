@@ -11,7 +11,10 @@ export default function CompanyPresent () {
   }).join('')}
   </div>
 
-  <div class="presentation" id="presentation-org" style="color: white;">
+
+
+  <div class="presentation" style="color: white;">
+  
     <h2>Quienes <strong style="color: rgb(214, 237, 114);">somos</strong></h2>
     <p>Bienvenidos a nuestra empresa de asesoría de videojuegos, una empresa líder en el sector de los videojuegos. </p>
 
