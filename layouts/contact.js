@@ -22,7 +22,7 @@ export default function Contact () {
           <input type="text" id="email" name="email">
           <div style="display: none;" id="error-mensaje-1">El email ingresado es incorrecto</div> 
         </div>
-        <div class="contacto__campo" style=" position: relative;;height: 60px; bottom: 30px;">
+        <div class="contacto__campo" style=" position: relative;;height: 100px; bottom: 30px;">
           <label for="mensaje">Mensaje</label>
           <textarea  id="mensaje" name="mensaje"></textarea>
           <div style="display: none;" id="error-mensaje-2">El mensaje ingresado es invalido</div> 
