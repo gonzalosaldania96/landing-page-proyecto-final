@@ -18,7 +18,8 @@
   color: white;
   font-size: 40px;
   font-weight: 900;
-
+  position: relative;
+  z-index: 1;
 }
 
 
@@ -30,7 +31,8 @@
     height: 700px;
     width: 90%;
     gap: 2em; 
-
+    position: relative;
+    z-index: 2;
 }
 
 .comment-section img{
