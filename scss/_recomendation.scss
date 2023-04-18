@@ -1,6 +1,6 @@
 
 .section-tab{
-    height: 700px;
+    height: 800px;
     width: 100%;
     background: url(./public/image/hero/paisaje.png) no-repeat;
     background-position: center;
@@ -11,14 +11,15 @@
     align-items: center;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,  
     rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
-    overflow: hidden;
+    
 }  
 
 .title-comments{
   color: white;
   font-size: 40px;
   font-weight: 900;
-
+  position: relative;
+  z-index: 1;
 }
 
 
@@ -28,9 +29,10 @@
     align-items: center;
     color: white;
     height: 700px;
-    width: 100%;
+    width: 90%;
     gap: 2em; 
-
+    position: relative;
+    z-index: 2;
 }
 
 .comment-section img{
@@ -46,14 +48,6 @@
     box-shadow: 20px 20px 22px -20px black;
 }
 
-.comments__card{
-  height: 250px;
-  width: 350px;
-  overflow: hidden;
-  border-top: 10px solid red;
-  border-bottom: 5px solid yellow;
-
-}
 
 .comments__comment{
   width: auto;
@@ -72,7 +66,7 @@
 
 .name-desc{
     position: relative;
-    right: 20px;
+    right: 20px;  
 }
  
 .comments {
@@ -81,7 +75,7 @@
  
   }
   
-  .comments__title {
+  .comments__title { 
   text-align: center;
   font-size: 2.5rem;
   margin-bottom: 50px;
@@ -112,7 +106,8 @@
   width: 400px;
   overflow: hidden;
   border-top: 10px solid red;
-  border-bottom: 5px solid yellow;
+  border-bottom: 5px solid yellow; 
+  padding-bottom: 10px;
   }
   
   @media screen and (min-width: 768px) {
