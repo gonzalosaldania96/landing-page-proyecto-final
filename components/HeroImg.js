@@ -8,8 +8,8 @@ export default function HeroImg ({ img, text }) {
   <div class = "text-hero">       
   ${text}
   </div>
-  <img src=${rutaImg} style="height:100%;width:100%;object-fit:cover;">
+  <img src=${rutaImg} style="height:100%;width:100%;background-position: center;">
    
   </div>
-    `
+    ` 
 }
