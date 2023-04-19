@@ -1,8 +1,9 @@
 import { generateRuteImg } from '../utils'
 import CompanyPresent from './CompanyPresent.js'
-import Contact from './Contact.js'
+import Contact from './contact.js'
 import Hero from './Hero.js'
 import Recomendation from './recomendation.js'
+import formWizard from './formWizard'
 
 const img = 'cratos.png'
 const rutaImg = generateRuteImg(img)
@@ -19,6 +20,7 @@ export default function Main () {
             <h2 class="title">Soy el<strong style="color: white"> Dios</strong> de la guerra</h2>
             <img src= ${rutaImg} alt="">
           </section>  
+          ${formWizard()}
         </div>
     </main>
     `

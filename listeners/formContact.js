@@ -8,7 +8,6 @@ function validarFormulario (evento) {
   const mensaje = $('#mensaje').val
   const mensajeErrorName = $('#error-mensaje')
   const mensajeErrorEmail = $('#error-mensaje-1')
-  const formEnviado = $('#ok-form')
   const mensajeErrorTextTarea = $('#error-mensaje-2')
   let acumulador = 0
 
