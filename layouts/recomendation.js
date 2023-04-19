@@ -1,4 +1,4 @@
-import CommentUser from '../components/CommentUser'
+import CommentUser from '../components/CommentUser.js'
 import { generateRuteImg } from '../utils'
 
 export default function Recomendation () {
