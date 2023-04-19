@@ -3,29 +3,29 @@ import $ from 'jquery'
 function validarFormulario (evento) {
   evento.preventDefault()
 
-  const nombre = document.getElementById('nombre').value
-  const email = document.getElementById('email').value
-  const mensaje = document.getElementById('mensaje').value
-  const mensajeErrorName = document.getElementById('error-mensaje')
-  const mensajeErrorEmail = document.getElementById('error-mensaje-1')
-  const formEnviado = document.getElementById('ok-form')
-  const mensajeErrorTextTarea = document.getElementById('error-mensaje-2')
+  const nombre = $('#nombre').val
+  const email = $('#email').val
+  const mensaje = $('#mensaje').val
+  const mensajeErrorName = $('#error-mensaje')
+  const mensajeErrorEmail = $('#error-mensaje-1')
+  const formEnviado = $('#ok-form')
+  const mensajeErrorTextTarea = $('#error-mensaje-2')
   let acumulador = 0
 
   const reg = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
   if (nombre.trim() === '' || nombre.length < 4) {
     // alert('El campo Nombre es obligatorio')
-    mensajeErrorName.style.display = 'block'
+    mensajeErrorName.css({ display: 'block' })
     disapprove('#nombre')
   } else {
-    mensajeErrorName.style.display = 'none'
+    mensajeErrorName.css({ display: 'none' })
     approve('#nombre')
     acumulador++
   }
 
   if (email.trim() === '') {
-    mensajeErrorEmail.style.display = 'block'
+    mensajeErrorEmail.css({ display: 'block' })
     disapprove('#email')
   } else {
     approve('#email')
@@ -34,10 +34,10 @@ function validarFormulario (evento) {
 
   if (!email.match(reg)) {
     // alert('El campo Email no tiene un formato válido')
-    mensajeErrorEmail.style.display = 'block'
+    mensajeErrorEmail.css({ display: 'block' })
     disapprove('#email')
   } else {
-    mensajeErrorEmail.style.display = 'none'
+    mensajeErrorEmail.css({ display: 'none' })
     approve('#email')
     acumulador++
   }
@@ -45,12 +45,12 @@ function validarFormulario (evento) {
   if (mensaje.trim() === '' || mensaje.length < 5) {
     // alert('El campo Mensaje es obligatorio')
     disapprove('#mensaje')
-    mensajeErrorTextTarea.style.display = 'block'
+    mensajeErrorTextTarea.css({ display: 'block' })
   } else {
     approve('#mensaje')
-    mensajeErrorTextTarea.style.display = 'none'
+    mensajeErrorTextTarea.css({ display: 'none' })
     acumulador++
-  } 
+  }
 
   if (acumulador === 4) {
     // eslint-disable-next-line no-undef
