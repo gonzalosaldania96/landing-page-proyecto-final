@@ -3,12 +3,11 @@ import $ from 'jquery'
 function validarFormulario (evento) {
   evento.preventDefault()
 
-  const nombre = $('#nombre').val
-  const email = $('#email').val
-  const mensaje = $('#mensaje').val
+  const nombre = $('#nombre').val()
+  const email = $('#email').val()
+  const mensaje = $('#mensaje').val()
   const mensajeErrorName = $('#error-mensaje')
   const mensajeErrorEmail = $('#error-mensaje-1')
-  const formEnviado = $('#ok-form')
   const mensajeErrorTextTarea = $('#error-mensaje-2')
   let acumulador = 0
 
