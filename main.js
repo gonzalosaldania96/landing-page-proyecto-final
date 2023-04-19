@@ -1,11 +1,16 @@
 import './style.scss'
-import { render } from './render.js'
-import { scrollHeader } from './listeners/scrollHeader.js'
-import { heroCarrousel } from './listeners/heroCarrousel.js'
-import { formContact } from './listeners/formContact.js'
+import { render } from './render'
+import { scrollHeader } from './listeners/scrollHeader'
+import { heroCarrousel } from './listeners/heroCarrousel'
+import { formContact } from './listeners/formContact'
+import { formWizard, showTab } from './listeners/formWizard'
 
 render(document.querySelector('#app'))
 
-scrollHeader()
+scrollHeader() 
 heroCarrousel()
 formContact()
+formWizard()
+
+let currentTab = 0; // La pestaña actual está configurada para ser la primera pestaña (0)
+showTab(currentTab); // se muestra el tab actual

@@ -2,12 +2,12 @@ let arrayPaises = ["Afganistán","Albania","Alemania","Andorra","Angola","Antigu
 
 const generosVideojuegos = ["Acción", "Aventura", "Deportes", "Estrategia", "Rol", "Disparos", "Carreras", "Simulación", "Plataformas", "Puzzle"];
 
-let currentTab = 0; // La pestaña actual está configurada para ser la primera pestaña (0)
-showTab(currentTab); // se muestra el tab actual
 
-function showTab(n) {
+let currentTab = 0; // La pestaña actual está configurada para ser la primera pestaña (0)
+export function showTab(n) {
   // esta funcion va a mostrar un tab especifico 
-  let x = document.getElementsByClassName("tab");
+  let x = document.querySelectorAll(".tab");
+  console.log(x);
   x[n].style.display = "block"; 
   //... y corrija los botones Anterior/Siguiente:
   if (n == 0) {
