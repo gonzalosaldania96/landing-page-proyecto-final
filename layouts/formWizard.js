@@ -27,8 +27,8 @@ export default function formWizard(){
           <button id="btn-resumen" type="button" style="display: none;margin-bottom: 200px;">Generar Resumen</button>
           <div style="overflow:auto;"> 
             <div style="float:right;"> 
-              <button type="button" id="prevBtn" onclick="nextPrev(-1)">anterior</button>  
-              <button type="button" id="nextBtn" onclick="nextPrev(1)">siguiente</button>  
+              <button type="button" id="prevBtn">anterior</button>  
+              <button type="button" id="nextBtn">siguiente</button>  
             </div>  
           </div>
 
