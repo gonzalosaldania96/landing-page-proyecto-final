@@ -2,12 +2,14 @@
     width: 100%;  
     height: 800px; 
    /* background-color: rgb(5, 4, 31);*/
-    background: url(./image/hero/guitar.png); 
+    background: url(/image/hero/guitar.png); 
     background-position: center;
     background-size: cover;
     display: flex;   
     justify-content: center;
-}
+    align-items: center;
+    
+} 
 
 .section-wizard{ 
 height: 530px; 
@@ -17,7 +19,7 @@ margin: auto;
 display: flex;
 border-radius: 20px;
 opacity: .92;
-
+margin-top: 100px;
 }
 
 .section-wizard .section-img{
