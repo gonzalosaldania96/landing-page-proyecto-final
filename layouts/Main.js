@@ -1,3 +1,4 @@
+import $ from 'jquery'
 import { generateRuteImg } from '../utils'
 import CompanyPresent from './CompanyPresent.js'
 import Contact from './contact.js'
@@ -8,11 +9,13 @@ import formWizard from './formWizard'
 const img = 'cratos.png'
 const rutaImg = generateRuteImg(img)
 
+const imagenes = await $.ajax('./heroInfo.json')
+
 export default function Main () {
   return /* html */`
     <main>
         <div class="general">
-          ${Hero()}
+          ${Hero({ imagenes })}
           ${CompanyPresent()}
           ${Recomendation()}
           ${Contact()}
