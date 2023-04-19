@@ -5,8 +5,7 @@ let arrayPaises = ["Afganistán","Albania","Alemania","Andorra","Angola","Antigu
 
 const generosVideojuegos = ["Acción", "Aventura", "Deportes", "Estrategia", "Rol", "Disparos", "Carreras", "Simulación", "Plataformas", "Puzzle"];
 
-
-let currentTab = 0; // La pestaña actual está configurada para ser la primera pestaña (0)
+let currentTab = 0;
 export function showTab(n) {
   // esta funcion va a mostrar un tab especifico 
   let x = document.querySelectorAll(".tab");
