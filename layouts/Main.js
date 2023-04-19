@@ -1,8 +1,8 @@
-import { generateRuteImg } from '../utils/index'
-import CompanyPresent from './CompanyPresent'
-import Contact from './Contact'
-import Hero from './Hero'
-import Recomendation from './recomendation'
+import { generateRuteImg } from '../utils'
+import CompanyPresent from './CompanyPresent.js'
+import Contact from './Contact.js'
+import Hero from './Hero.js'
+import Recomendation from './recomendation.js'
 
 const img = 'cratos.png'
 const rutaImg = generateRuteImg(img)

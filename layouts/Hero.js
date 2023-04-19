@@ -1,4 +1,4 @@
-import HeroImg from '../components/HeroImg'
+import HeroImg from '../components/HeroImg.js'
 import imagenes from '../heroInfo.json'
 
 export default function Hero () {
