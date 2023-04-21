@@ -23,6 +23,7 @@ function fixStepIndicator (specificStep) {
     actualStep.removeClass('finish')
   }
   // ... y agrega la clase "active" en el paso actual:
+  lastStep.addClass('finish')
   actualStep.addClass('active')
 }
 
@@ -30,21 +31,17 @@ function fixStepIndicator (specificStep) {
 
 // Manejador de eventos para actualizar la barra de progreso
 function updateProgressBar () {
-  const progressBar = document.querySelector('.progress-bar')
-  // Obtengo la sección actual del formulario
-  const currentSection = $('.tab:visible')
-
-  // Obtengo el índice de la sección actual
-  const currentIndex = $('.tab').index(currentSection)
-
+  const progressBar = $('.progress-bar')
   // Obtengo el número total de secciones
   const totalSections = $('.tab').length
-
+  let percentComplete = 0
   // Calcul0 el porcentaje completado
-  const percentComplete = ((currentIndex + 1) / totalSections) * 100
+  if (currentTab > 0) {
+    percentComplete = (currentTab / totalSections) * 100
+  }
 
   // Actualizo la barra de progreso
-  progressBar.style.width = percentComplete + '%'
+  progressBar.css({ width: `${percentComplete}%` })
 }
 
 function validateForm () {
@@ -66,13 +63,6 @@ function validateForm () {
       }
     }
   })
-
-  // Si el estado válido es verdadero, marque el paso como finalizado y válido:
-  if (valid) {
-    document.getElementsByClassName('step')[currentTab].className += ' finish'
-    // Actualizar la barra de progreso
-    updateProgressBar()
-  }
   return valid // devuelve el estado válido
 }
 
@@ -117,6 +107,7 @@ export function showTab (step) {
     $('#nextBtn').text('Enviar')
   }
   // ... y ejecute una función que mostrará el indicador de paso correcto:
+  updateProgressBar()
   fixStepIndicator(step)
 }
 
