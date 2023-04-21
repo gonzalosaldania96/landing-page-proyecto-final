@@ -4,14 +4,26 @@ import $ from 'jquery'
 
 // const generosVideojuegos = ['Acción', 'Aventura', 'Deportes', 'Estrategia', 'Rol', 'Disparos', 'Carreras', 'Simulación', 'Plataformas', 'Puzzle']
 
-function fixStepIndicator (n) {
+function fixStepIndicator (specificStep) {
   // Esta función elimina la clase "active" de todos los pasos...
-  const x = document.getElementsByClassName('step')
-  for (let i = 0; i < x.length; i++) {
-    x[i].className = x[i].className.replace(' active', '')
+  const allStep = $('.step')
+  const actualStep = $(allStep[specificStep])
+
+  const lastStep = $(allStep[specificStep - 1])
+  const nextStep = $(allStep[specificStep + 1])
+
+  if (lastStep.hasClass('active')) {
+    lastStep.removeClass('active')
+  }
+  if (nextStep.hasClass('active')) {
+    nextStep.removeClass('active')
+  }
+
+  if (actualStep.hasClass('finish')) {
+    actualStep.removeClass('finish')
   }
   // ... y agrega la clase "active" en el paso actual:
-  x[n].className += ' active'
+  actualStep.addClass('active')
 }
 
 // Obtengo el formulario y la barra de progreso
@@ -65,10 +77,11 @@ function validateForm () {
 }
 
 function nextPrev (step) {
+  console.log(step)
   // Esta función determinará qué pestaña mostrar
   const tabs = document.querySelectorAll('.tab')
   // Salir de la función si algún campo en la pestaña actual no es válido:
-  if (step === 1 && !validateForm()) return false
+  if (step === 1 && !validateForm()) return
   // Ocultar la pestaña actual:
   $(tabs[currentTab]).css({ display: 'none' })
   // Aumentar o disminuir la pestaña actual en 1:
@@ -82,7 +95,6 @@ function nextPrev (step) {
     $('#form-enviado').css({ display: 'flex' })
     $('#btn-resumen').css({ display: 'block' })
     // ... el form es enviado:
-    return false
   }
   // De lo contrario, muestra la pestaña correcta:
   showTab(currentTab)
@@ -102,9 +114,7 @@ export function showTab (step) {
   }
 
   if (step === (tabs.length - 1)) {
-    $('#nextBtn').text('Submit')
-  } else {
-    $('#nextBtn').text('Next')
+    $('#nextBtn').text('Enviar')
   }
   // ... y ejecute una función que mostrará el indicador de paso correcto:
   fixStepIndicator(step)

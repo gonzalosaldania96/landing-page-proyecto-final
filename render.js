@@ -9,4 +9,3 @@ export function render (root) {
       ${Footer()}
       `
 }
- 

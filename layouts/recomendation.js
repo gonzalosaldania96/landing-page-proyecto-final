@@ -2,7 +2,7 @@ import CommentUser from '../components/CommentUser.js'
 import { generateRuteImg } from '../utils'
 
 export default function Recomendation () {
-  const usuarios = [{ name: 'Lucas', comment: 'He aprendido a jugar mejor y a disfrutar más de mis juegos favoritos. El profesor es muy paciente y sabe explicar bien las estrategias y los trucos.' }, { name: 'Juan', comment: 'Antes pasaba horas y horas jugando sin parar, descuidando mi salud y mis estudios.' }, { name: 'Carlos', comment: 'Es una forma divertida y didáctica de aprender sobre los diferentes géneros, plataformas y títulos de videojuegos.' }, { name: 'Marcelo', comment: 'Es una forma divertida y didáctica de aprender sobre los diferentes géneros, plataformas y títulos de videojuegos.' }] 
+  const usuarios = [{ name: 'Lucas', comment: 'He aprendido a jugar mejor y a disfrutar más de mis juegos favoritos. El profesor es muy paciente y sabe explicar bien las estrategias y los trucos.' }, { name: 'Juan', comment: 'Antes pasaba horas y horas jugando sin parar, descuidando mi salud y mis estudios.' }, { name: 'Carlos', comment: 'Es una forma divertida y didáctica de aprender sobre los diferentes géneros, plataformas y títulos de videojuegos.' }, { name: 'Marcelo', comment: 'Es una forma divertida y didáctica de aprender sobre los diferentes géneros, plataformas y títulos de videojuegos.' }]
 
   const img = 'paisaje.png'
   const paisajeImg = generateRuteImg(img)
@@ -10,7 +10,7 @@ export default function Recomendation () {
   const soldadoImg = generateRuteImg(imgSoldado)
 
   return ` 
-  <section class="section-tab" style=${`background:url(${paisajeImg});`}> 
+  <section class="section-tab" style=background:url(${paisajeImg});> 
   <div style="height: 800px;background-color: transparent;width: 100%;position: absolute; right: 0;overflow:hidden;">
      <img style="background-size: cover; background-position: center;width: 100%; opacity: 0.15;" src=${soldadoImg} alt="img-war">
   </div>

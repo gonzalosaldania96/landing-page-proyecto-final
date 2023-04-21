@@ -1,5 +1,5 @@
 export default function formWizard () {
-  return ` <div class="contenedor-wizard">
+  return /* html */` <div class="contenedor-wizard">
     <section class="section-wizard" >
         <form id="regForm" action="">
             <div class="progress">
@@ -33,7 +33,6 @@ export default function formWizard () {
           </div>
 
           <div id="steps" style="text-align:center;margin-top:40px;">  
-            <span class="step"></span>
             <span class="step"></span>
             <span class="step"></span>
             <span class="step"></span>
