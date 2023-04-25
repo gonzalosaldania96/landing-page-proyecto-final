@@ -8,7 +8,7 @@ export function scrollHeader () {
     const desplazamientoActual = window.scrollY
 
     if (desplazamientoActual === 0) {
-      header.css({ background: 'transparent' })
+      header.css({ background: '#fdfdfd3d' })
     } else {
       header.css({ background: 'white' })
     }
