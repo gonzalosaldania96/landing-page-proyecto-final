@@ -1,4 +1,4 @@
-.footer{
+.footer {
     height: 300px;
     background-size: cover !important;
     background-position: center !important;
@@ -7,7 +7,7 @@
     justify-content: space-between;
 }   
 
-.icons-footer{
+.icons-footer {
     width: 700px; 
     display: flex;   
     align-items: center;
@@ -15,22 +15,18 @@
     margin-right: 600px;  
 }
  
-.fa-brands{
+.fa-brands {
     fill: white;
     transition: .7s;
 }
 
-.fa-brands:hover{
+.fa-brands:hover {
     fill: crimson;
 }
 
-.footer p{  
+.footer p {  
     color: white;
     font-size: 20px;
     font-weight: 600;
     margin-right: 60px;
-    
 }
-
-
-
