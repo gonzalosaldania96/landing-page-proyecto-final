@@ -104,13 +104,17 @@ export function showTab (step) {
     $('#prevBtn').css({ display: 'inline' })
   }
 
-  if (step === (tabs.length - 1)) {
+  if (currentTab === 2) {
     $('#nextBtn').text('Enviar')
+  } else {
+    $('#nextBtn').text('Siguiente')
   }
 
   const formComplete = currentTab === 3
 
   if (formComplete) {
+    $('#prevBtn').css({ display: 'none' })
+    $('#nextBtn').css({ display: 'none' })
     generarResumen()
   }
 
