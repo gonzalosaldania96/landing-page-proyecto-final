@@ -1,0 +1,55 @@
+[
+    { 
+    "img": "gta.png", 
+    "text": "Soy rico , soy miserable, soy bastante promedio para esta ciudad" 
+    },  
+    {
+    "img": "play.png",
+    "text":"El juego no tiene límites"
+    }, 
+    { 
+    "img": "juego1.png", 
+    "text": "Nada es verdad, todo está permitido" 
+    },
+    { 
+    "img": "juego2.png", 
+    "text": "Soy el rayo, transformado por la lluvia" 
+    },
+    { 
+    "img": "juego3.png", 
+    "text": "¡Ven aquí!" 
+    },
+    { 
+    "img": "6098048.png", 
+    "text": "La guerra es un infierno" 
+    },
+    { 
+    "img": "batalla.png", 
+    "text": "El virus ha sido liberado" 
+    },
+    { 
+    "img": "battlefield.png", 
+    "text": "No es el hecho de que no podamos hacerlo, es el hecho de que debemos hacerlo" 
+    },
+    { 
+    "img": "forza.png", 
+    "text": "El festival nunca termina" 
+    },
+    { 
+    "img": "gow.png",  
+    "text": "¡Zeus, tu hijo ha regresado! ¡He traído el caos al Olimpo!" 
+    },
+    { 
+    "img": "ojo-cratos.png", 
+    "text": "¡No hay más Dioses, sólo soy yo!" 
+    },
+    { 
+    "img": "the-last-of-us-2.png", 
+    "text": "Todos los que he querido han muerto o me han abandonado" 
+    },
+    { 
+    "img": "the-last-of-us.png", 
+    "text": "¡Hemos sobrevivido gracias a mí! ¡No gracias a ti!" 
+    }
+]
+ 

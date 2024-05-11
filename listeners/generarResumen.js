@@ -10,7 +10,7 @@ export function generarResumen () {
   })
   console.log(obj)
   const dialog = document.querySelector('dialog')
-
+  
   resumen.addEventListener('click', () => {
     const dataResumen = document.querySelectorAll('.dato-resumen p')
 
