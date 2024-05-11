@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
   "name": "landing-ejemplo",
   "private": true,
@@ -22,3 +23,29 @@
     "extends": "standard"
   }
 }
+=======
+{
+  "name": "landing-ejemplo",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "sass": "^1.61.0",
+    "standard": "^17.0.0",
+    "vite": "^4.2.0"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.4.0",
+    "jquery": "^3.6.4",
+    "jspdf": "2.5.1"
+  },
+  "eslintConfig": {
+    "extends": "standard"
+  }
+}
+>>>>>>> f486018a28550791719dfa6578087fb6a1ea01bb
